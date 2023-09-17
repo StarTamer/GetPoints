@@ -1,0 +1,12 @@
+﻿@using morePoints.Data.Models
+
+<h1>Все Джерси</h1>
+<h3>@Model.currCategory</h3>
+<div class="row mt-5 mb-2">
+    @{
+        foreach (Jersey jersey in Model.allJerseys)
+        {
+            @Html.Partial("AllJerseys", jersey);
+        }
+    }
+</div>
